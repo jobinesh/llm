@@ -3,6 +3,8 @@ package com.jobinesh.ai.example.model;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import static com.jobinesh.ai.example.model.IDGenerator.generateUUID;
+
 public class Appointment {
     private String id;
     private Patient patient;
@@ -25,7 +27,7 @@ public class Appointment {
         this.minutesDuration = minutesDuration;
         this.address = address;
         this.providerName = providerName;
-        this.id = UUID.randomUUID().toString();
+        this.id = generateUUID();
     }
 
     public String getId() {
@@ -107,4 +109,5 @@ public class Appointment {
     public void setProviderName(String providerName) {
         this.providerName = providerName;
     }
+
 }

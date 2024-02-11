@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.UUID;
 
+import static com.jobinesh.ai.example.model.IDGenerator.generateUUID;
+
 public class Patient {
     private String id;
     private String firstName;
@@ -22,7 +24,7 @@ public class Patient {
         this.active = active;
         this.deceased = deceased;
         this.deceasedDateTime = deceasedDateTime;
-        this.id = UUID.randomUUID().toString();
+        this.id = generateUUID();
     }
 
     public String getId() {
